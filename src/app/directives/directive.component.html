@@ -1,0 +1,60 @@
+<h1> hello {{title}}</h1>
+<!--Attribute directive-->
+
+
+
+<h1 [ngStyle]="myColors">Attribute directive</h1>
+
+
+<!--Hidden-->
+
+<div>
+    
+        <h1 [hidden]="Ishidden">Im hidden</h1>
+        <button type="submit"(click)="hideShow()" >click</button>
+</div>
+
+
+
+<!--structural directive(ngFor,NgIf,NgSwitch)-->
+
+<!--*ngFor-->
+
+
+<ul *ngFor="let o of myArray">
+    <li>{{o}}</li>
+</ul>
+
+
+<tr>
+    <td>Country</td>
+    <td>color</td>
+</tr>
+
+<!--secound-->
+<tr *ngFor="let obj of countries">
+        
+    <td>{{obj.name}}</td>
+    <td>{{obj.code}}</td>
+<tr>
+
+<!--third nested json-->
+
+<hr>
+<hr>
+<ul *ngFor="let p of peopleByCountry">
+    <li>{{p.country}}</li>
+
+    <ul *ngFor="let obj of p.people">
+            <li>{{obj.name}}</li>
+</ul>
+
+</ul>
+
+
+
+
+
+
+
+
